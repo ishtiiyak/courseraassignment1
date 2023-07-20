@@ -1,10 +1,8 @@
 body {
   font-size: 16px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: black;
-  color: #fff;
 }
-
+/*fggg*/
 h1 {
   text-align: center;
   font-size: 28px;
@@ -14,12 +12,13 @@ h1 {
 .paraone,
 .paratwo,
 .parathree {
-  background-color: teal;
+  background-color: grey;
   clear: both;
   border: 1px solid black;
   padding: 20px;
   margin-bottom: 20px;
   position: relative;
+  color: black;
 }
 
 .paraoneh3,
@@ -27,13 +26,22 @@ h1 {
 .parathreeh3 {
   position: absolute;
 
-  left: 50%;
+  left: 85%;
   transform: translateX(-50%);
-  background-color: blueviolet;
   margin: 0;
   padding: 10px;
-  border-radius: 5px;
+  border: solid black;
   color: white;
+}
+.paraoneh3{
+  background-color: burlywood;
+  
+}
+.paratwoh3{
+  background-color: darkred;
+}
+.parathreeh3{
+  background-color: pink;
 }
 
 @media (min-width: 992px) {
@@ -46,7 +54,7 @@ h1 {
     display: inline-block;
     margin: 10px;
     vertical-align: top;
-    border-radius: 10%;
+    
   }
   
   .paraoneh3,
@@ -54,9 +62,9 @@ h1 {
   .parathreeh3 {
     width: 33%;
     position: relative;
-    left: 50%;
+    left: 85%;
     top: -20px;
-    border-radius: 20%;
+    
   }
 
   .paradiv,
@@ -78,9 +86,9 @@ h1 {
   .parathreeh3 {
     width: 33%;
     position: relative;
-    left: 50%;
+    left: 85%;
     top: -20px;
-    border-radius: 20%;
+    
     
   }
   .body{
@@ -98,17 +106,17 @@ h1 {
   .paratwo{
    float:right;
     width: 47%;
-    top:-250px;
+    top:-210px;
    }
  .parathree
  {
    width: 100%;
-   top:-200px;
+   top:-160px;
  }
 
 .parathree,.paratwo,.paraone{
           height:150px;
-padding:70px 10px 10px 10px;
+padding:30px 10px 10px 10px;
 }
 
  .paraoneh3,
@@ -116,9 +124,9 @@ padding:70px 10px 10px 10px;
   .parathreeh3 {
     width: 33%;
     position: relative;
-    left: 50%;
-    top: -20px;
-    border-radius: 20%;
+    left: 83%;
+    top: -30px;
+    
     
   }
 }
