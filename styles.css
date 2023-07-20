@@ -1,0 +1,124 @@
+body {
+  font-size: 16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: black;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.paraone,
+.paratwo,
+.parathree {
+  background-color: teal;
+  clear: both;
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.paraoneh3,
+.paratwoh3,
+.parathreeh3 {
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: blueviolet;
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .paraone,
+  .parathree,
+  .paratwo {
+    position: relative;
+    width: 30%;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+    border-radius: 10%;
+  }
+  
+  .paraoneh3,
+  .paratwoh3,
+  .parathreeh3 {
+    width: 33%;
+    position: relative;
+    left: 50%;
+    top: -20px;
+    border-radius: 20%;
+  }
+
+  .paradiv,
+  .infoclass {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .paraone,
+  .paratwo,
+  .parathree {
+    width: 100%;
+  }
+
+  .paraoneh3,
+  .paratwoh3,
+  .parathreeh3 {
+    width: 33%;
+    position: relative;
+    left: 50%;
+    top: -20px;
+    border-radius: 20%;
+    
+  }
+  .body{
+    width: 90%;
+  }
+  
+}
+@media(min-width:768px) and (max-width:991px)
+{
+  .paraone
+ {
+   float:left;
+    width: 47%;
+ }
+  .paratwo{
+   float:right;
+    width: 47%;
+    top:-250px;
+   }
+ .parathree
+ {
+   width: 100%;
+   top:-200px;
+ }
+
+.parathree,.paratwo,.paraone{
+          height:150px;
+padding:70px 10px 10px 10px;
+}
+
+ .paraoneh3,
+  .paratwoh3,
+  .parathreeh3 {
+    width: 33%;
+    position: relative;
+    left: 50%;
+    top: -20px;
+    border-radius: 20%;
+    
+  }
+}
