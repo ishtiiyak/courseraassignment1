@@ -1,132 +1,61 @@
-body {
-  font-size: 16px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-/*fggg*/
-h1 {
-  text-align: center;
-  font-size: 28px;
-  margin-top: 20px;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
 
-.paraone,
-.paratwo,
-.parathree {
-  background-color: grey;
-  clear: both;
-  border: 1px solid black;
-  padding: 20px;
-  margin-bottom: 20px;
-  position: relative;
-  color: black;
-}
+        .certified-text {
+            font-size: 14px;
+            color: #888;
+            margin: 0;
+        }
 
-.paraoneh3,
-.paratwoh3,
-.parathreeh3 {
-  position: absolute;
+        .paraone,
+        .paratwo,
+        .parathree {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
 
-  left: 85%;
-  transform: translateX(-50%);
-  margin: 0;
-  padding: 10px;
-  border: solid black;
-  color: white;
-}
-.paraoneh3{
-  background-color: burlywood;
-  
-}
-.paratwoh3{
-  background-color: darkred;
-}
-.parathreeh3{
-  background-color: pink;
-}
+        .paraone {
+            background-color: #f5f5f5;
+            color: #333;
+        }
 
-@media (min-width: 992px) {
-  .paraone,
-  .parathree,
-  .paratwo {
-    position: relative;
-    width: 30%;
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 10px;
-    vertical-align: top;
-    
-  }
-  
-  .paraoneh3,
-  .paratwoh3,
-  .parathreeh3 {
-    width: 33%;
-    position: relative;
-    left: 85%;
-    top: -20px;
-    
-  }
+        .paratwo {
+            background-color: #ffe6e6;
+            color: #cc0000;
+        }
 
-  .paradiv,
-  .infoclass {
-    margin-left: 20px;
-    margin-top: 20px;
-  }
-}
+        .parathree {
+            background-color: #e6f2ff;
+            color: #0066cc;
+        }
 
-@media (max-width: 767px) {
-  .paraone,
-  .paratwo,
-  .parathree {
-    width: 100%;
-  }
+        .paraone:hover,
+        .paratwo:hover,
+        .parathree:hover {
+            background-color: #f0f0f0;
+        }
 
-  .paraoneh3,
-  .paratwoh3,
-  .parathreeh3 {
-    width: 33%;
-    position: relative;
-    left: 85%;
-    top: -20px;
-    
-    
-  }
-  .body{
-    width: 90%;
-  }
-  
-}
-@media(min-width:768px) and (max-width:991px)
-{
-  .paraone
- {
-   float:left;
-    width: 47%;
- }
-  .paratwo{
-   float:right;
-    width: 47%;
-    top:-210px;
-   }
- .parathree
- {
-   width: 100%;
-   top:-160px;
- }
+        .paraone:active,
+        .paratwo:active,
+        .parathree:active {
+            background-color: #ddd;
+        }
 
-.parathree,.paratwo,.paraone{
-          height:150px;
-padding:30px 10px 10px 10px;
-}
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
 
- .paraoneh3,
-  .paratwoh3,
-  .parathreeh3 {
-    width: 33%;
-    position: relative;
-    left: 83%;
-    top: -30px;
-    
-    
-  }
-}
+        .navbar-toggler {
+            border: solid black;
+        }
+
+        .navbar-toggler-icon {
+          
+        }
+    </style>
