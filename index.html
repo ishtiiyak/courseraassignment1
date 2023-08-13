@@ -1,98 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/styles.css">
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <title>Greeting Assignment</title>
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-light" id="header-nav">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a href="assign_two.html" class="d-flex flex-column align-items-center">
-                        <h1>FOOD, LLC</h1>
-                        <p class="certified-text">certified</p>
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
-                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#dream">DREAM</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#focus">FOCUS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">SKILLS</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main class="container mt-4">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="paraone" id="dream">
-                    <h2 class="paraoneh3">
-                        DREAM
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi odit obcaecati deserunt. Optio
-                        quibusdam quia architecto voluptatem iusto possimus sit? Atque sequi eius laborum magni
-                        ratione obcaecati quae labore mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusantium doloribus at voluptatibus, dicta voluptatum quaerat dolorem nemo, explicabo minus
-                        quas eaque velit, maxime aspernatur ab odio doloremque ex ad dolor?
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="paratwo" id="focus">
-                    <h2 class="paratwoh3">
-                        FOCUS
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, quaerat hic inventore modi
-                        dolorum adipisci et reiciendis neque cumque natus, at fugiat voluptates, ut exercitationem
-                        consequuntur harum? Veritatis, maxime recusandae. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Exercitationem id laborum repellat quibusdam modi fuga facere incidunt? Facere
-                        voluptate quibusdam laudantium quod accusamus magnam laborum quia architecto velit similique
-                        sequi.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="parathree" id="skills">
-                    <h2 class="parathreeh3">
-                        SKILLS
-                    </h2>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus cum tenetur inventore
-                        fuga rem? Nesciunt a harum soluta et provident doloribus nam totam aut numquam, earum enim
-                        illo, aperiam eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, magnam
-                        suscipit doloribus, eum quae soluta eveniet fugit laudantium ducimus labore enim quisquam amet
-                        alias, similique illum ex ullam deleniti adipisci?
-                    </p>
-                </div>
-            </div>
-        </div>
-    </main>
+  <h1>Greeting Assignment</h1>
+  <label for="nameInput">Enter a name:</label>
+  <input type="text" id="nameInput">
+  <button id="greetButton">Greet</button>
+  <div id="greetings"></div>
+  <script>
+    (function () {
+      // SpeakHello.js
+      var helloSpeaker = {};
+      var speakWord = "Hello";
+      helloSpeaker.speak = function (name) {
+        return speakWord + " " + name;
+      };
+      window.helloSpeaker = helloSpeaker;
 
+      // SpeakGoodBye.js
+      var byeSpeaker = {};
+      var speakWord = "Good Bye";
+      byeSpeaker.speak = function (name) {
+        return speakWord + " " + name;
+      };
+      window.byeSpeaker = byeSpeaker;
+
+      // Greet the provided name
+      var greetButton = document.getElementById("greetButton");
+      var nameInput = document.getElementById("nameInput");
+      var greetingsContainer = document.getElementById("greetings");
+      
+      greetButton.addEventListener("click", function () {
+        var name = nameInput.value;
+        var firstLetter = name.charAt(0).toLowerCase();
+        var greeting = "";
+        if (firstLetter === 'j') {
+          greeting = byeSpeaker.speak(name);
+        } else {
+          greeting = helloSpeaker.speak(name);
+        }
+        var greetingElement = document.createElement("p");
+        greetingElement.textContent = greeting;
+        greetingsContainer.appendChild(greetingElement);
+      });
+    })();
+  </script>
 </body>
-
 </html>
