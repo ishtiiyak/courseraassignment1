@@ -6,45 +6,36 @@
 </head>
 <body>
   <h1>Greeting Assignment</h1>
-  <label for="nameInput">Enter a name:</label>
+  <label for="nameInput">Enter names (comma-separated):</label>
   <input type="text" id="nameInput">
   <button id="greetButton">Greet</button>
   <div id="greetings"></div>
   <script>
     (function () {
-      // SpeakHello.js
-      var helloSpeaker = {};
-      var speakWord = "Hello";
-      helloSpeaker.speak = function (name) {
-        return speakWord + " " + name;
-      };
-      window.helloSpeaker = helloSpeaker;
-
-      // SpeakGoodBye.js
-      var byeSpeaker = {};
-      var speakWord = "Good Bye";
-      byeSpeaker.speak = function (name) {
-        return speakWord + " " + name;
-      };
-      window.byeSpeaker = byeSpeaker;
-
-      // Greet the provided name
+      // Greet the provided names
       var greetButton = document.getElementById("greetButton");
       var nameInput = document.getElementById("nameInput");
       var greetingsContainer = document.getElementById("greetings");
       
       greetButton.addEventListener("click", function () {
-        var name = nameInput.value;
-        var firstLetter = name.charAt(0).toLowerCase();
-        var greeting = "";
-        if (firstLetter === 'j') {
-          greeting = byeSpeaker.speak(name);
-        } else {
-          greeting = helloSpeaker.speak(name);
+        var names = nameInput.value.split(','); // Split input into an array of names
+        greetingsContainer.innerHTML = ""; // Clear previous greetings
+        
+        for (var i = 0; i < names.length; i++) {
+          var name = names[i].trim(); // Remove leading/trailing spaces
+          var firstLetter = name.charAt(0).toUpperCase(); // Convert to uppercase for comparison
+          var greeting = "";
+          
+          if (firstLetter === 'J') {
+            greeting = "Goodbye " + name;
+          } else {
+            greeting = "Hello " + name;
+          }
+          
+          var greetingElement = document.createElement("p");
+          greetingElement.textContent = greeting;
+          greetingsContainer.appendChild(greetingElement);
         }
-        var greetingElement = document.createElement("p");
-        greetingElement.textContent = greeting;
-        greetingsContainer.appendChild(greetingElement);
       });
     })();
   </script>
